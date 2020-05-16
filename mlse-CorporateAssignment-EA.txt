@@ -1,0 +1,25 @@
+Display Name
+-> MLSE - Corporate Assignment
+
+Data Type
+-> String
+
+Input Type
+-> Pop-up Menu
+
+Recon Display
+-> Computer
+
+POP-UP MENU CHOICES
+Building Operations
+Creative
+Digital Labs
+Food & Beverage
+Global Partnership
+HR
+IT
+Marketing
+MLSE Foundation/Launchpad
+MLSES Restaurants
+Retail
+Teams

@@ -1,0 +1,17 @@
+Display Name
+-> macOS 32-Bit applications
+
+Data Type
+-> String
+
+Invetory Display
+-> Extension Attributes
+
+Input Tyep
+-> Script
+
+----- Copy Script Below -----
+#!/bin/bash
+
+apps=$(cat /var/log/32bit_apps_installed.log)
+echo "<result>$apps</result>"

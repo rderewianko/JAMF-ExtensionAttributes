@@ -1,0 +1,20 @@
+Display Name
+-> Cisco Umbrella Present
+
+Data Type
+-> String
+
+Inventory Display 
+-> Extension Attributes
+
+Input Type
+-> Script
+
+----- Copy Script Below -----
+#!/bin/sh
+if [ -e /opt/cisco/anyconnect/umbrella ]
+then
+  echo "<result>True</result>"
+else
+  echo "<result>False</result>"
+fi

@@ -1,0 +1,20 @@
+Display Name 
+Symantec Present 
+
+Data Type 
+-> String
+
+Invetory Display
+-> Extension Attributes
+
+Input Type
+-> Script
+
+----- Copy script below -----
+#!/bin/sh
+if [ -e /Applications/Symantec\ Solutions/ ]
+then 
+  echo "<result>True</result>"
+else
+  echo "<result>False</result>"
+fi

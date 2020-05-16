@@ -1,0 +1,20 @@
+Display Name
+-> Cisco AnyConnect Present
+
+Data Type 
+-> String
+
+Inventory Type
+-> Extension Attributes
+
+Input Type 
+-> Script
+
+----- Copy Script Below -----
+#!/bin/sh
+if [ -e /opt/cisco/anyconnect ]
+then 
+  echo "<result>True</result>"
+else
+  echo "<result>False</result>"
+fi

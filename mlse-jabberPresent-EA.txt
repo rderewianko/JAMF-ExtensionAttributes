@@ -1,0 +1,20 @@
+Display Name
+-> Jabber Present
+
+Data Type
+-> String 
+
+Inventory Display 
+-> Extension Attributes
+
+Input Type
+-> Script
+
+----- Copy Script Below -----
+#!/bin/sh
+if [ -e /Volumes/Macintosh\ HD/Applications/Cisco\ Jabber.app ]
+then 
+  echo "<result>True</result>"
+else
+  echo "<result>False</result>"
+fi

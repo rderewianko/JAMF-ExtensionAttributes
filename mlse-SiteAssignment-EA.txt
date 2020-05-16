@@ -1,0 +1,27 @@
+Display Name
+Site Assignment
+
+Data Type
+String
+
+Inventory Display
+Extension Attributes
+
+Input Type
+Script
+
+----- Copy Script Below -----
+#!/bin/sh
+
+apiURL='https://mlse.jamfcloud.com:8443/JSSResource/computers/udid/'
+apiUser="APIUSER"
+apiPass="@P1U53RM753!"
+udid=$(/usr/sbin/system_profiler SPHardwareDataType | /usr/bin/awk '/Hardware UUID:/ { print $3 }')
+
+siteName=$(/usr/bin/curl -H "Accept: application/xml" -s -u ${apiUser}:${apiPass} "${apiURL}${udid}" | /usr/bin/xpath '/computer/general/site/name[1]/text()' 2>/dev/null)
+
+if [[ "$siteName" != "" ]]; then
+    echo "<result>$siteName</result>"
+else
+    echo "<result>Not Available</result>"
+fi

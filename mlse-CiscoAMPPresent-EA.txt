@@ -1,0 +1,20 @@
+Display Name
+-> Cisco AMP Present
+
+Data Type
+-> String
+
+Inventory Display 
+-> Extension Attributes
+
+Input Type
+-> Script
+
+----- Copy script below -----
+#!/bin/sh
+if [ -e /opt/cisco/amp ]
+then 
+  echo "<result>True</result>"
+else
+  echo "<result>False</result>"
+fi
